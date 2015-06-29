@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let SAMPLE_RATE:Float64 = 44100                                       // 1
     let DURATION = 2.0                                                    // 2
     let HZ:Double = 440
-    let FILE_NAME = "\(HZ)-square.aif"                                      // 3
+    let FILE_NAME = "\(HZ)-saw.aif"                                      // 3
     
     let fileManager = NSFileManager.defaultManager()
     let urls = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -96,13 +96,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         for i in 0..<Int(wavelengthInSamples){
           
           // Square Wave
-          var sample:Int16 = i < Int(wavelengthInSamples) / 2 ? Int16.max : Int16.min //12 & 13
+          //var sample = Int16(i < Int(wavelengthInSamples) / 2 ? Int16.max : Int16.min).bigEndian //12 & 13
           
           // Saw Tooth : Kind of...
-          //var sample = Int16(((Double(i) / wavelengthInSamples) * Double(Int16.max) * 2) - Double(Int16.max))
+          var sample = Int16(((Double(i) / wavelengthInSamples) * Double(Int16.max) * 2) - Double(Int16.max)).bigEndian
           
           // Sine Sample
-          //var sample = Int16(Double(Int16.max) * sin(2 * M_PI * (Double(i) / wavelengthInSamples)))
+          //var sample = Int16(Double(Int16.max) * sin(2 * M_PI * (Double(i) / wavelengthInSamples))).bigEndian
           
           theErr = AudioFileWriteBytes(audioFile, 0, Int64(sampleCount * 2), &bytesToWrite, &sample)
           if theErr != 0 { print(CheckError(theErr)) }
@@ -112,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
       }
       theErr = AudioFileClose(audioFile)                                  // 16
-      assert(theErr == noErr, "shit's broken yo")
+      if theErr != 0 { print(CheckError(theErr)) }
     }
     
     return true
