@@ -156,6 +156,7 @@
 		E209231B1B31F329009D1487 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = wintercreative;
 				TargetAttributes = {
@@ -411,6 +412,7 @@
 				E20923441B31F329009D1487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E20923451B31F329009D1487 /* Build configuration list for PBXNativeTarget "CAToneFileGeneratorSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +421,7 @@
 				E20923471B31F329009D1487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
