@@ -13,6 +13,7 @@
 		E20923301B31F329009D1487 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E209232F1B31F329009D1487 /* Images.xcassets */; };
 		E20923331B31F329009D1487 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20923311B31F329009D1487 /* LaunchScreen.xib */; };
 		E209233F1B31F329009D1487 /* CAToneFileGeneratorSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209233E1B31F329009D1487 /* CAToneFileGeneratorSwiftTests.swift */; };
+		E2A2E0501B45745300B081DE /* AudioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A2E04F1B45745300B081DE /* AudioError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E20923381B31F329009D1487 /* CAToneFileGeneratorSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAToneFileGeneratorSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E209233D1B31F329009D1487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E209233E1B31F329009D1487 /* CAToneFileGeneratorSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAToneFileGeneratorSwiftTests.swift; sourceTree = "<group>"; };
+		E2A2E04F1B45745300B081DE /* AudioError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				E20923281B31F329009D1487 /* AppDelegate.swift */,
+				E2A2E04F1B45745300B081DE /* AudioError.swift */,
 				E209232A1B31F329009D1487 /* ViewController.swift */,
 				E209232C1B31F329009D1487 /* Main.storyboard */,
 				E209232F1B31F329009D1487 /* Images.xcassets */,
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A2E0501B45745300B081DE /* AudioError.swift in Sources */,
 				E209232B1B31F329009D1487 /* ViewController.swift in Sources */,
 				E20923291B31F329009D1487 /* AppDelegate.swift in Sources */,
 			);
